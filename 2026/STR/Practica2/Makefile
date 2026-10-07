@@ -14,7 +14,5 @@ SRC_FREERTOS = $(FREERTOS_DIR)/tasks.c \
                $(shell find $(PORT_DIR) -name "wait_for_event.c" | head -n 1) \
                $(shell find $(FREERTOS_DIR)/portable/MemMang -name "heap_3.c" | head -n 1)
 
-all: EJ4
-
-EJ4: EJ4.c
-	$(CC) EJ4.c $(SRC_FREERTOS) $(CFLAGS) -o EJ4
+%: %.c
+	$(CC) $< $(SRC_FREERTOS) $(CFLAGS) -o $@

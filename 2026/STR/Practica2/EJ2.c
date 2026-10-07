@@ -12,21 +12,21 @@ enum {
 SemaphoreHandle_t semA;
 void A(void *pvParameters) {
     for (;;) {
-        printf("Tarea A\n");
+        printf("Tarea 1\n");
         vTaskDelay(pdMS_TO_TICKS(1000));
     }
 }
 
 void B(void *pvParameters) {
     for (;;) {
-        printf("Tarea B\n");
+        printf("Tarea 2\n");
         vTaskDelay(pdMS_TO_TICKS(1000));
     }
 }
 
 void C(void *pvParameters) {
     for (;;) {
-        printf("Tarea C\n");
+        printf("Tarea 3\n");
         vTaskDelay(pdMS_TO_TICKS(1000));
     }
 }
